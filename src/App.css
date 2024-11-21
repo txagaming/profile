@@ -1,18 +1,73 @@
-@media screen and (max-width: 400px) {
-  #features {
-    padding: 20px;
-    width: 111%;
-  }
-  #about,
-  #services,
-  #testimonials,
-  #team,
-  #contact,
-  #footer {
-    width: 111%;
-  }
+/* Remove the forceful display rule */
+.modal {
+  /* Remove display: block; and opacity here */
+  /* Let React handle visibility based on the state */
+  opacity: 1; /* Normal opacity */
+}
 
-  #portfolio {
-    width: 110%;
+/* Custom styles for the button */
+.large-button {
+  font-size: 1.5rem;
+  padding: 9px 15px;
+  min-width: 127px;
+  border-radius: 34px;
+}
+
+/* Position the button fixed at the top and center it */
+.button-container {
+  position: fixed;
+  top: 20px;  /* Distance from the top */
+  left: 49%;
+  transform: translateX(-50%);  /* Centers the button horizontally */
+  z-index: 10;  /* Ensures the button stays on top of other elements */
+  width: auto;
+  padding: 10px;
+}
+
+/* Mobile-friendly (for small screens) */
+@media (max-width: 768px) {
+  .large-button {
+    font-size: 1.2rem;  /* Adjust the font size for smaller screens */
+    padding: 12px 25px;  /* Adjust padding for mobile */
+  }
+}
+
+/* Set the background image for the about section */
+.about-section {
+  background-image: url('https://media.discordapp.net/attachments/881450895466983445/1308865993887715380/Grand_Theft_Auto_V_11_20_2024_10_00_14_PM.png?ex=673f7ff2&is=673e2e72&hm=9a912453f2f28f39d31a886b1e0c599d8ce5bd4f01f27388e9f90b38ea609d6a&=&format=webp&quality=lossless&'); /* Add the path to your background image */
+  background-size: cover;  /* Ensures the image covers the whole area */
+  background-position: center;  /* Centers the image */
+  background-attachment: fixed; /* Keeps the background fixed when scrolling */
+  height: 100vh;  /* Makes the section take the full viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;  /* Text color should be white for better contrast */
+  padding: 0; /* Remove any extra padding */
+}
+
+.about-text {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5); /* Optional: Add a semi-transparent background to make text stand out */
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 800px;
+  margin: 0 auto; /* Centers the content */
+}
+
+.contact-details {
+  margin-top: 30px;
+  background-color: rgba(0, 0, 0, 0.7); /* Darker background for contact details */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .about-text h2 {
+    font-size: 24px;
+  }
+  .contact-details p {
+    font-size: 14px;
   }
 }
